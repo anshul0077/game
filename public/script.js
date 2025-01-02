@@ -1,10 +1,12 @@
 let  userCounter=document.querySelector("#user-counter")
 let cpuCounter=document.querySelector("#CPU-counter")
+let nav=document.querySelector(".nav")
 // nav ref
 let rulesBtn=document.querySelector("#Rulesbtn")
 let resetBtn=document.querySelector("#Resetbtn")
 let rulesDiv=document.querySelector(".rules")
-let nav=document.querySelector(".nav")
+const newLocal = ""
+let resetmsg=document.querySelector(".resetmsg")
 //footer ref
 let main=document.querySelector(".main")
 
@@ -30,7 +32,14 @@ flag=0
 rulesdivfxn()
 resetBtn.addEventListener('click',resetscore)
 function resetscore(){
+setTimeout(()=>{
+resetmsg.style.display='block'
 
+},100)
+setTimeout(()=>{
+    resetmsg.style.display='none'
+
+},2000)
 userCounter.innerHTML=0
 cpuCounter.innerHTML=0
 }
