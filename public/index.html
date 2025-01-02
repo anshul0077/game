@@ -1,105 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GAME</title>
-    <link rel="stylesheet" href="/src/output.css" />
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/favicon.svg" type="image/x-icon">
-  </head>
 
-  <body>
-    <div
-      class="wrapper h-screen w-screen bg-gradient-to-b from-blue-950 to-blue-700"
-    >
-      <div class="nav  h-24 flex items-center justify-center w-full">
-        <div
-          class="content shadow-lg shadow-black mt-10 h-full flex items-center justify-between w-5/12 border-2 rounded-md"
-        >
-          <div class="left h-fit pl-5 w-1/4">
-            <h3 class="text-white font-bold">
-              ROCK <br />
-              PAPER <br />
-              SCISSORS
-            </h3>
-          </div>
-          <div class="right h-fit flex items-end justify-end pr-4 w-2/4 gap-2">
-            <div
-              class="p1 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md"
-            >
-              <h4 class="text-xs text-blue-700">PLAYER</h4>
-              <p class="text-5xl text-blue-900">0</p>
-            </div>
-            <div
-              class="p2 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md"
-            >
-              <h4 class="text-xs text-blue-700">COMPUTER</h4>
-              <p class="text-5xl text-blue-900">0</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GAME</title>
+  <link rel="stylesheet" href="/src/output.css" />
+  <link rel="shortcut icon"
+    href="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/favicon.svg"
+    type="image/x-icon">
+</head>
+
+<body>
+  <div class="wrapper h-screen w-screen bg-gradient-to-b from-blue-950 to-blue-700">
+    <div class="nav  h-24 flex items-center justify-center w-full">
       <div
-        class="main flex gap-4 items-center justify-center h-[65%] mt-10 mb-10   w-full"
-      >
-      <div class=" -ml-20 mr-9  user-image-div flex  items-center gap-3 justify-center flex-col ">
-        <h2 class="flex items-center justify-center text-center text-white font-semibold text-xl">Choose one <br> of these</h2>
-        <button class="bg-yellow-400 p-1 rounded-full"> <img class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  " src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg" alt=""> </button>
-        <button class="bg-yellow-400 p-1 rounded-full"> <img class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "  src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg" alt=""> </button>
-        <button class="bg-yellow-400 p-1 rounded-full"> <img class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  " src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg" alt=""> </button>
-      </div>
-        <div
-          class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col"
-        >
-          <h2 class="text-white font-semibold mb-5">YOU PICKED</h2>
-          <div class="layer  shadow-black flex justify-center items-center h-[75%] w-[70%]  bg-yellow-500 rounded-full ">
-            <div
-              class="img-box flex justify-center items-center h-[80%] w-[80%] bg-white shadow-inner shadow-black rounded-full"
-            >
-              <img
-                class="w-24"
-                src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
-                alt=""
-              />
-            </div>
+        class="content shadow-lg shadow-black mt-10 h-full flex items-center justify-between w-5/12 border-2 rounded-md">
+        <div class="left h-fit pl-5 w-1/4">
+          <h3 class="text-white font-bold">
+            ROCK <br />
+            PAPER <br />
+            SCISSORS
+          </h3>
+        </div>
+        <div class="right h-fit flex items-end justify-end pr-4 w-2/4 gap-2">
+          <div class="p1 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
+            <h4 class="text-xs text-blue-700">PLAYER</h4>
+            <p id="user-counter" class="text-5xl text-blue-900">0</p>
           </div>
-          
-        </div>
-        
-        <div
-          class="d h-20 flex items-center justify-center flex-col w-1/5 gap-5"
-        >
-          <p class="text-4xl text-white font-bold">YOU WIN</p>
-          <button
-            class="rounded-sm shadow-lg shadow-black   py-2 text-blue-800 font-bold tracking-widest px-5 text-sm bg-white"
-          >
-            PLAY AGAIN
-          </button>
-        </div>
-        <div
-          class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col"
-        >
-          <h2 class="text-white font-semibold mb-5">THE HOUSE PICKED</h2>
-          <div class="layer  flex justify-center items-center h-[75%] w-[70%]  bg-red-600 rounded-full">
-            <div
-              class="img-box flex justify-center items-center h-[80%] w-[80%] shadow-inner shadow-black  bg-white rounded-full"
-            >
-              <img
-                class="w-24"
-                src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
-                alt=""
-              />
-            </div>
+          <div class="p2 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
+            <h4 class="text-xs text-blue-700">COMPUTER</h4>
+            <p id="CPU-counter" class="text-5xl text-blue-900">0</p>
           </div>
         </div>
-      </div>
-
-      <div class="footer h-20 flex items-center justify-end pr-8 gap-3">
-        <button class="border p-2 rounded-sm text-sm text-white">RULES</button>
-        <button class="border p-2 rounded-sm text-sm text-white">
-          RESET SCORE
-        </button>
       </div>
     </div>
-  </body>
+    <div class="main flex gap-4 items-center justify-center h-[65%] mt-10 mb-10   w-full">
+      <div class=" -ml-20 mr-9  user-image-div flex  items-center gap-3 justify-center flex-col ">
+        <h2 class="flex items-center justify-center text-center text-white font-semibold text-xl">Choose one <br> of
+          these</h2>
+        <button class="bg-yellow-400 p-1 rounded-full"> <img
+            class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
+            alt=""> </button>
+        <button class="bg-yellow-400 p-1 rounded-full"> <img
+            class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
+            alt=""> </button>
+        <button class="bg-yellow-400 p-1 rounded-full"> <img
+            class="bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
+            alt=""> </button>
+      </div>
+      <div class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col">
+        <h2 class="text-white font-semibold mb-5">YOU PICKED</h2>
+        <div class="layer  shadow-black flex justify-center items-center h-[75%] w-[70%]  bg-yellow-500 rounded-full ">
+          <div
+            class="img-box flex justify-center items-center h-[80%] w-[80%] bg-white shadow-inner shadow-black rounded-full">
+            <img class="w-24"
+              src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
+              alt="" />
+          </div>
+        </div>
+
+      </div>
+
+      <div class="d h-20 flex items-center justify-center flex-col w-1/5 gap-5">
+        <p class="text-4xl text-white font-bold">YOU WIN</p>
+        <button
+          class="rounded-sm shadow-lg shadow-black   py-2 text-blue-800 font-bold tracking-widest px-5 text-sm bg-white">
+          PLAY AGAIN
+        </button>
+      </div>
+      <div class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col">
+        <h2 class="text-white font-semibold mb-5">THE HOUSE PICKED</h2>
+        <div class="layer  flex justify-center items-center h-[75%] w-[70%]  bg-red-600 rounded-full">
+          <div
+            class="img-box flex justify-center items-center h-[80%] w-[80%] shadow-inner shadow-black  bg-white rounded-full">
+            <img class="w-24"
+              src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer h-20 flex items-center justify-end pr-8 gap-3">
+      <button id="Rulesbtn" class="border p-2 rounded-sm text-sm text-white">RULES</button>
+      <div class="rules h-fit w-1/3 shadow-xl  right-[30%] hidden shadow-black p-4 bottom-1 rounded-lg  text-white absolute bg-blue-950">
+        <ul class="list-disc pl-4 ">
+          <li class="list-none font-semibold">
+            Here are the rules for playing Rock-Paper-Scissors 
+          </li>
+
+          <li>
+
+            Two players participate.
+          </li>
+          <li>
+
+            Gestures: Rock (fist), Paper (open hand), Scissors (V fingers).
+          </li>
+          <li>
+            Determine the winner: Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock.
+
+          </li>
+          <li>
+
+            Replay if both players choose the same shape.
+          </li>
+          <li>
+
+            Say "Rock, Paper, Scissors, Shoot!" and show shapes on "Shoot."
+          </li>
+        </ul>
+        
+        
+      </div>
+      <button id="Resetbtn" class="border p-2 rounded-sm text-sm text-white">
+        RESET SCORE
+      </button>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
 </html>
