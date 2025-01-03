@@ -1,5 +1,6 @@
 let userpick = document.querySelector("#user-Picked")
 let cpuimg = document.querySelector(".cpuimg")
+let userpimg=document.querySelector(".user-img")
 let images = [
     { id: 0, iname: "scissor", src: "https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg" },
     { id: 1, iname: "rock", src: "https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-rock.svg" },
@@ -10,6 +11,8 @@ let images = [
 
 let uid = document.querySelector(".user-image-div")
 uid.addEventListener('click', (e) => {
+
+    mapping(e)
     let randumNum = Math.floor(Math.random() * 3)
     console.log(randumNum);
     if (e.target.parentElement.tagName === "BUTTON") {
@@ -18,7 +21,12 @@ uid.addEventListener('click', (e) => {
         console.log("userchooses =");
         randomImgae(randumNum)
         userpick.style.display="flex"
-        
+         console.log("this is the id of clicked image",e.target.parentElement.getAttribute("id"));
+       
+            
+         console.log( images[e.target.parentElement.getAttribute("id")].src)
+         console.log(userpimg.src=( images[e.target.parentElement.getAttribute("id")].src));
+         
 
     }
 
@@ -41,6 +49,10 @@ function randomImgae(randumNum) {
 }
 
 
+function mapping (e){
+
+
+}
 
 
 //assets
