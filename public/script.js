@@ -97,6 +97,7 @@ function resetscore() {
     display.style.display="none"
     userpick.style.display="none"
     cpuimg.src=""
+    
     setTimeout(() => {
         resetmsg.style.display = 'block'
 
@@ -105,8 +106,11 @@ function resetscore() {
         resetmsg.style.display = 'none'
 
     }, 2000)
-    userCounter.innerHTML = 0
-    cpuCounter.innerHTML = 0
+    cpoints=0
+upoints=0
+    cpuCounter.innerHTML=cpoints
+    userCounter.innerHTML=upoints
+
 }
 
 //footer func completed
