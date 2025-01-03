@@ -1,6 +1,11 @@
 let userpick = document.querySelector("#user-Picked")
 let cpuimg = document.querySelector(".cpuimg")
-let userpimg=document.querySelector(".user-img")
+let display = document.querySelector(".display")
+let userpimg = document.querySelector(".user-img")
+let playagain = document.querySelector(".playbtn")
+let cpoints=0
+let upoints=0
+let pointdis = document.querySelector(".point-text")
 let images = [
     { id: 0, iname: "scissor", src: "https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg" },
     { id: 1, iname: "rock", src: "https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-rock.svg" },
@@ -8,25 +13,28 @@ let images = [
 ]
 
 
-
+let randumNum
 let uid = document.querySelector(".user-image-div")
 uid.addEventListener('click', (e) => {
 
-    mapping(e)
-    let randumNum = Math.floor(Math.random() * 3)
+
+    randumNum = Math.floor(Math.random() * 3)
     console.log(randumNum);
     if (e.target.parentElement.tagName === "BUTTON") {
+        display.style.display = "flex"
+        playagain.style.display = "none"
+        logic(e)
 
         console.log(e.target.parentElement.getAttribute("id"))
         console.log("userchooses =");
         randomImgae(randumNum)
-        userpick.style.display="flex"
-         console.log("this is the id of clicked image",e.target.parentElement.getAttribute("id"));
-       
-            
-         console.log( images[e.target.parentElement.getAttribute("id")].src)
-         console.log(userpimg.src=( images[e.target.parentElement.getAttribute("id")].src));
-         
+        userpick.style.display = "flex"
+        console.log("this is the id of clicked image", e.target.parentElement.getAttribute("id"));
+
+
+        console.log(images[e.target.parentElement.getAttribute("id")].src)
+        userpimg.src = (images[e.target.parentElement.getAttribute("id")].src)
+
 
     }
 
@@ -49,10 +57,7 @@ function randomImgae(randumNum) {
 }
 
 
-function mapping (e){
 
-
-}
 
 
 //assets
@@ -103,6 +108,100 @@ function resetscore() {
 
 //footer func completed
 
+/////////////////////////////////////////////////     THE MAIN LOGIC   //////////////////////////////////////////////////////////////////
+
+function logic(event) {
+    if (event.target.parentElement.getAttribute("id") == randumNum) {
+          
+            pointdis.style.color="white"
+        pointdis.innerHTML = "DRAW"
+    }
+
+    // 0== scissor
+    //1==rock
+    //2==paper
+    else if (event.target.parentElement.getAttribute("id") == 0) {
+        if (randumNum == 1) {
+            pointdis.innerHTML="CPU WIN"
+            pointdis.style.color="red"
+            cpuCounter.innerHTML=cpoints+=1
+            console.log("cpu win");
+            console.log("user loose");
+
+
+        }
+        else {
+            pointdis.innerHTML="USER WIN"
+            pointdis.style.color="yellow"
+            userCounter.innerHTML=upoints+=1
+
+            console.log("user win ");
+            console.log("cpu loose");
+            
+
+        }
+
+    }
+    else if(event.target.parentElement.getAttribute("id") == 1){
+        if(randumNum==0){
+                    pointdis.innerHTML="USER WIN"
+            pointdis.style.color="yellow"
+            userCounter.innerHTML=upoints+=1
+
+        console.log("user  win");
+        console.log("cpu loose");
+
+        
+        }
+        else{
+              pointdis.innerHTML="CPU WIN"
+            pointdis.style.color="red"
+            cpuCounter.innerHTML=cpoints+=1
+
+
+
+          console.log("cpu win ");
+          console.log("user loose");
+
+          
+        }
+
+    }
+    else if(event.target.parentElement.getAttribute("id") == 2){
+        if(randumNum==1){
+                    pointdis.innerHTML="USER WIN"
+            pointdis.style.color="yellow"
+            userCounter.innerHTML=upoints+=1
+
+            console.log("user  win");
+            console.log("cpu loose");
+
+            
+            }
+            else{
+                  pointdis.innerHTML="CPU WIN"
+            pointdis.style.color="red"
+            cpuCounter.innerHTML=cpoints+=1
+
+
+
+                console.log("cpu win");
+                
+              console.log("user loose");
+              
+            }
+    }
+
+  // 0== scissor
+    //1==rock
+    //2==paper
+
+
+
+
+
+
+}
 
 
 

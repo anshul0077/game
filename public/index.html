@@ -26,7 +26,7 @@
         <div class="right h-fit flex items-end justify-end pr-4 w-2/4 gap-2">
           <div class="p1 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
             <h4 class="text-xs text-blue-700">PLAYER</h4>
-            <p id="user-counter" class="text-5xl text-blue-900">10</p>
+            <p id="user-counter" class="text-5xl text-blue-900">0</p>
           </div>
           <div class="p2 h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
             <h4 class="text-xs text-blue-700">COMPUTER</h4>
@@ -52,12 +52,12 @@
             src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-paper.svg"
             alt=""> </button>
       </div>
-      <div id="user-Picked" class="d  h-[70%] hidden w-1/4  gap-4 flex items-center justify-center flex-col">
+      <div id="user-Picked" class="d  h-[70%] hidden w-1/4  gap-4  items-center justify-center flex-col">
         <h2 class="text-white font-semibold mb-5">YOU PICKED</h2>
         <div class="layer  shadow-black flex justify-center items-center h-[75%] w-[70%]  bg-yellow-500 rounded-full ">
           <div
             class="img-box flex justify-center items-center h-[80%] w-[80%] bg-white shadow-inner shadow-black rounded-full">
-            <img class="w-24 user-img"
+            <img class="w-24 rotate-90 user-img"
               src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
               alt="" />
           </div>
@@ -65,10 +65,10 @@
 
       </div>
 
-      <div class="d h-20 flex hidden items-center justify-center flex-col w-1/5 gap-5">
-        <p class="text-4xl text-white font-bold">YOU WIN</p>
+      <div class="display h-20 hidden items-center justify-center flex-col w-1/5 gap-5">
+        <p class="point-text text-4xl text-white font-bold drop-shadow-2xl " ></p>
         <button
-          class="rounded-sm shadow-lg shadow-black   py-2 text-blue-800 font-bold tracking-widest px-5 text-sm bg-white">
+          class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold tracking-widest px-5 text-sm bg-white">
           PLAY AGAIN
         </button>
       </div>
@@ -77,7 +77,7 @@
         <div class="layer  flex justify-center items-center h-[75%] w-[70%]  bg-red-600 rounded-full">
           <div
             class="img-box flex justify-center items-center h-[80%] w-[80%] shadow-inner shadow-black  bg-white rounded-full">
-            <img class=" cpuimg w-24 "
+            <img class=" -rotate-90 cpuimg w-24 "
               src=""
               alt="" />
           </div>
