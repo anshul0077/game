@@ -94,6 +94,9 @@ function rulesdivfxn() {
 rulesdivfxn()
 resetBtn.addEventListener('click', resetscore)
 function resetscore() {
+    display.style.display="none"
+    userpick.style.display="none"
+    cpuimg.src=""
     setTimeout(() => {
         resetmsg.style.display = 'block'
 
