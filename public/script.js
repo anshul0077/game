@@ -1,3 +1,4 @@
+
 let userpick = document.querySelector("#user-Picked")
 let cpuimg = document.querySelector(".cpuimg")
 let display = document.querySelector(".display")
@@ -22,8 +23,9 @@ uid.addEventListener('click', (e) => {
     console.log(randumNum);
     if (e.target.parentElement.tagName === "BUTTON") {
         display.style.display = "flex"
-        playagain.style.display = "none"
+        
         logic(e)
+        renderfirst()
 
         console.log(e.target.parentElement.getAttribute("id"))
         console.log("userchooses =");
@@ -57,7 +59,9 @@ function randomImgae(randumNum) {
 }
 
 
-
+playagain.addEventListener('click',function(){
+    
+})
 
 
 //assets
@@ -123,10 +127,11 @@ function logic(event) {
             pointdis.style.color="white"
         pointdis.innerHTML = "DRAW"
     }
+    // if((parseInt(cpuCounter.innerHTML))==20){
+    //     console.log("THe CPU WINS THE GAME");
+        
+    //    }
 
-    // 0== scissor
-    //1==rock
-    //2==paper
     else if (event.target.parentElement.getAttribute("id") == 0) {
         if (randumNum == 1) {
             pointdis.innerHTML="CPU WIN"
@@ -210,9 +215,33 @@ function logic(event) {
 
 }
 
+let dis=document.querySelector(".description")
 
 
-
-
-
+function  renderfirst(){
+    if(parseInt(cpuCounter.innerHTML)==5){
+        // alert("cpu win the game")
+          dis.style.display="flex"
+          dis.innerHTML=`<p class="text-red-500">CPU</p>&nbsp; win the game  <br><br>  <button
+      class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold w-40 tracking-widest px-5 text-sm bg-white">
+      PLAY AGAIN
+    </button>`
+           nav.style.filter = "blur(10px)"
+            main.style.filter = "blur(10px)"
+             
+        
+    }
+    if(parseInt(userCounter.innerHTML)==5){
+        // alert("user win the game")
+        dis.style.display="flex"
+        dis.innerHTML=`<p class="text-yellow-500">USER</p>&nbsp; win the game  <br><br>  <button
+      class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold w-40 tracking-widest px-5 text-sm bg-white">
+      PLAY AGAIN
+    </button>`
+         nav.style.filter = "blur(10px)"
+            main.style.filter = "blur(10px)"
+            
+                        
+    }
+}
 

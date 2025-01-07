@@ -13,10 +13,12 @@
 
 <body>
   <div class="wrapper h-screen  w-screen bg-gradient-to-b from-blue-950 to-blue-700">
-    <div class="nav   h-24 flex items-center justify-center w-full">
+
+    <div class="nav    h-24 flex items-center justify-center w-full">
       <div
         class="content shadow-lg shadow-black mt-10 h-full flex items-center justify-between w-5/12 border-2 rounded-md">
         <div class="left h-fit pl-5 w-1/4">
+
           <h3 class="text-white font-bold">
             ROCK <br />
             PAPER <br />
@@ -34,12 +36,14 @@
           </div>
         </div>
       </div>
+      
     </div>
     <div class="main  flex gap-4 items-center justify-center h-[65%] mt-10 mb-10   w-full">
+      <h1 class="absolute top-12 left-[42%] text-white text-2xl"> 20 points game</h1>
       <div class="  -ml-20 mr-9   user-image-div flex  items-center gap-3 justify-center flex-col ">
         <h2 class="flex items-center justify-center text-center text-white font-semibold text-xl">Choose one <br> of
           these</h2>
-        <button id="0"  class="0 bg-yellow-400 p-1 rounded-full"> <img
+        <button id="0" class="0 bg-yellow-400 p-1 rounded-full"> <img
             class="cimg0 bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
             src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
             alt=""> </button>
@@ -66,31 +70,28 @@
       </div>
 
       <div class="display h-20 hidden items-center justify-center flex-col w-1/5 gap-5">
-        <p class="point-text text-4xl text-white font-bold drop-shadow-2xl " ></p>
-        <button
-          class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold tracking-widest px-5 text-sm bg-white">
-          PLAY AGAIN
-        </button>
+        <p class="point-text text-4xl text-white font-bold drop-shadow-2xl "></p>
+        
       </div>
       <div class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col">
         <h2 class="text-white font-semibold mb-5">THE HOUSE PICKED</h2>
         <div class="layer  flex justify-center items-center h-[75%] w-[70%]  bg-red-600 rounded-full">
           <div
             class="img-box flex justify-center items-center h-[80%] w-[80%] shadow-inner shadow-black  bg-white rounded-full">
-            <img class=" -rotate-90 cpuimg w-24 "
-              src=""
-              alt="" />
+            <img class=" -rotate-90 cpuimg w-24 " src="" alt="" />
           </div>
         </div>
       </div>
     </div>
 
     <div class="footer h-20 flex items-center justify-end pr-8 gap-3">
+      
       <button id="Rulesbtn" class="border p-2 rounded-sm text-sm text-white">RULES</button>
-      <div class="rules h-fit w-1/3 shadow-xl  right-[30%] hidden shadow-black p-4 bottom-1 rounded-lg  text-white absolute bg-blue-950">
+      <div
+        class="rules h-fit w-1/3 shadow-xl  right-[30%] hidden shadow-black p-4 bottom-1 rounded-lg  text-white absolute bg-blue-950">
         <ul class="list-disc pl-4 ">
           <li class="list-none font-semibold">
-            Here are the rules for playing Rock-Paper-Scissors 
+            Here are the rules for playing Rock-Paper-Scissors
           </li>
 
           <li>
@@ -114,8 +115,8 @@
             Say "Rock, Paper, Scissors, Shoot!" and show shapes on "Shoot."
           </li>
         </ul>
-        
-        
+
+
       </div>
       <div class="resetmsg absolute left-[40%] bg-white p-2 hidden rounded-md border-l-8 border-green-500 ">
         <h4 class="text-2xl">RESET SCORE SUCCESSFULLY</h4>
@@ -123,6 +124,12 @@
       <button id="Resetbtn" class="border p-2 rounded-sm text-sm text-white">
         RESET SCORE
       </button>
+    </div>
+    <div class="description  hidden    absolute top-[40%] w-fit align-middle items-center justify-center flex-col flex left-[40%] text-6xl text-white font-semibold "> <p class="text-yellow-500">USER</p>&nbsp; win the game
+    
+      <br>
+      <br>
+    
     </div>
   </div>
   <script src="./script.js"></script>
