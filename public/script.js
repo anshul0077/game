@@ -60,7 +60,8 @@ function randomImgae(randumNum) {
 
 
 playagain.addEventListener('click',function(){
-    
+console.log("hello");
+
 })
 
 
