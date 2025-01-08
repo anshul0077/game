@@ -3,7 +3,7 @@ let userpick = document.querySelector("#user-Picked")
 let cpuimg = document.querySelector(".cpuimg")
 let display = document.querySelector(".display")
 let userpimg = document.querySelector(".user-img")
-let playagain = document.querySelector(".playbtn")
+
 let cpoints=0
 let upoints=0
 let pointdis = document.querySelector(".point-text")
@@ -59,10 +59,6 @@ function randomImgae(randumNum) {
 }
 
 
-playagain.addEventListener('click',function(){
-console.log("hello");
-
-})
 
 
 //assets
@@ -217,10 +213,21 @@ function logic(event) {
 }
 
 let dis=document.querySelector(".description")
-
+function playagain(){
+ dis.addEventListener('click',e=>{
+    if(e.target.tagName=="BUTTON"){
+   resetscore()
+   dis.style.display="none"
+   nav.style.filter = ""
+            main.style.filter = ""
+        
+    }
+ })
+}
+playagain()
 
 function  renderfirst(){
-    if(parseInt(cpuCounter.innerHTML)==5){
+    if(parseInt(cpuCounter.innerHTML)==20){
         // alert("cpu win the game")
           dis.style.display="flex"
           dis.innerHTML=`<p class="text-red-500">CPU</p>&nbsp; win the game  <br><br>  <button
@@ -232,7 +239,7 @@ function  renderfirst(){
              
         
     }
-    if(parseInt(userCounter.innerHTML)==5){
+    if(parseInt(userCounter.innerHTML)==20){
         // alert("user win the game")
         dis.style.display="flex"
         dis.innerHTML=`<p class="text-yellow-500">USER</p>&nbsp; win the game  <br><br>  <button
@@ -245,4 +252,3 @@ function  renderfirst(){
                         
     }
 }
-
