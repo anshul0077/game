@@ -247,3 +247,12 @@ function  renderfirst(){
                         
     }
 }
+let pointsref=document.querySelector(".ponits-ref")
+
+let cross=document.querySelector(".cross")
+cross.addEventListener('click',()=>{
+    
+    rulesDiv.style.display = "none"
+            nav.style.filter = "blur(0px)"
+            main.style.filter = "blur(0px)"
+})
