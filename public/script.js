@@ -124,10 +124,7 @@ function logic(event) {
             pointdis.style.color="white"
         pointdis.innerHTML = "DRAW"
     }
-    // if((parseInt(cpuCounter.innerHTML))==20){
-    //     console.log("THe CPU WINS THE GAME");
-        
-    //    }
+  
 
     else if (event.target.parentElement.getAttribute("id") == 0) {
         if (randumNum == 1) {
@@ -201,9 +198,7 @@ function logic(event) {
             }
     }
 
-  // 0== scissor
-    //1==rock
-    //2==paper
+  
 
 
 
@@ -228,7 +223,7 @@ playagain()
 
 function  renderfirst(){
     if(parseInt(cpuCounter.innerHTML)==20){
-        // alert("cpu win the game")
+        
           dis.style.display="flex"
           dis.innerHTML=`<p class="text-red-500">CPU</p>&nbsp; win the game  <br><br>  <button
       class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold w-40 tracking-widest px-5 text-sm bg-white">
@@ -240,7 +235,7 @@ function  renderfirst(){
         
     }
     if(parseInt(userCounter.innerHTML)==20){
-        // alert("user win the game")
+        
         dis.style.display="flex"
         dis.innerHTML=`<p class="text-yellow-500">USER</p>&nbsp; win the game  <br><br>  <button
       class="playbtn rounded-sm  shadow-lg shadow-black   py-2 text-blue-800 font-bold w-40 tracking-widest px-5 text-sm bg-white">
