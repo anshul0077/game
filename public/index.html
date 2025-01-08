@@ -28,40 +28,40 @@
         <div class="right h-fit sm:h-fit flex items-end justify-end pr-4  w-2/4 gap-2">
           <div class="p1 h-16 sm:h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
             <h4 class=" text-xs sm:text-xs text-blue-700">PLAYER</h4>
-            <p id="user-counter" class="text-5xl text-blue-900">0</p>
+            <p id="user-counter" class="text-3xl sm:text-5xl text-blue-900">0</p>
           </div>
           <div class="p2 h-16 sm:h-20 w-4/12 bg-white flex items-center justify-center flex-col rounded-md">
             <h4 class="text-[10px] sm:text-xs text-blue-700">COMPUTER</h4>
-            <p id="CPU-counter" class="text-5xl text-blue-900">0</p>
+            <p id="CPU-counter" class="text-3xl sm:text-5xl text-blue-900">0</p>
           </div>
         </div>
       </div>
       
     </div>
-    <div class="main  flex gap-4 items-center justify-center h-[65%] mt-10 mb-10   w-full">
+    <div class="main flex gap-4 items-center flex-col sm:flex-row justify-center h-[65%] mt-10 mb-10   w-full">
       <h1 class="absolute top-9 sm:top-12 left-[27%] sm:left-[42%] text-white text-md sm:text-2xl"> 20 points game</h1>
-      <div class="  -ml-20 mr-9   user-image-div flex  items-center gap-3 justify-center flex-col ">
-        <h2 class="flex items-center justify-center text-center text-white font-semibold text-xl">Choose one <br> of
+      <div class=" -mt-5 sm:-ml-20 mr-9   user-image-div flex flex-row sm:flex-col  items-center gap-3 justify-center  ">
+        <h2 class="flex items-center justify-center text-center text-white font-semibold text-sm sm:text-xl">Choose one <br> of
           these</h2>
         <button id="0" class="0 bg-yellow-400 p-1 rounded-full"> <img
-            class="cimg0 bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            class="cimg0 bg-white shadow-inner shadow-black rounded-full px-1 sm:px-4 py-0 sm:py-3 w-[3rem] sm:w-[4.5rem]  "
             src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
             alt=""> </button>
         <button id="1" class=" 1  bg-yellow-400 p-1 rounded-full"> <img
-            class="cimg1 bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            class="cimg1 bg-white shadow-inner shadow-black rounded-full px-1 sm:px-4 py-1 sm:py-3 w-[3rem] sm:w-[4.5rem]"
             src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-rock.svg"
             alt=""> </button>
         <button id="2" class=" 2 bg-yellow-400 p-1 rounded-full"> <img
-            class="cimg2 bg-white shadow-inner shadow-black rounded-full px-4 py-3  w-[4.5rem]  "
+            class="cimg2 bg-white shadow-inner shadow-black rounded-full px-1 sm:px-4 py-0 sm:py-3 w-[3rem] sm:w-[4.5rem]"
             src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-paper.svg"
             alt=""> </button>
       </div>
-      <div id="user-Picked" class="d  h-[70%] hidden w-1/4  gap-4  items-center justify-center flex-col">
-        <h2 class="text-white font-semibold mb-5">YOU PICKED</h2>
-        <div class="layer  shadow-black flex justify-center items-center h-[75%] w-[70%]  bg-yellow-500 rounded-full ">
+      <div id="user-Picked" class="d  h-[25%] sm:h-[70%] w-[80%] sm:w-1/4 hidden gap-4  items-center justify-center flex-row sm:flex-col">
+        <h2 class="text-white text-sm sm:text-md font-semibold mb-5">YOU PICKED</h2>
+        <div class="layer  shadow-black flex justify-center items-center h-[95%] sm:h-[75%] w-[40%] sm:w-[70%]  bg-yellow-500 rounded-full ">
           <div
-            class="img-box flex justify-center items-center h-[80%] w-[80%] bg-white shadow-inner shadow-black rounded-full">
-            <img class="w-24 rotate-90 user-img"
+            class="img-box flex justify-center items-center h-[90%] sm:h-[80%] w-[90%] sm:w-[80%] bg-white shadow-inner shadow-black rounded-full">
+            <img class=" rotate-90 user-img w-40 sm:w-24  p-4 sm:p-0"
               src="https://raw.githubusercontent.com/markteekman/rock-paper-scissors-game/58944aa93df3f58bfe876369f0576b4e025ae77e/public/icon-scissors.svg"
               alt="" />
           </div>
@@ -69,26 +69,26 @@
 
       </div>
 
-      <div class="display h-20 hidden items-center justify-center flex-col w-1/5 gap-5">
+      <div class="display  h-20 hidden items-center justify-center flex-col w-1/5 gap-5">
         <p class="point-text text-4xl text-white font-bold drop-shadow-2xl "></p>
         
       </div>
-      <div class="d h-[70%] w-1/4  gap-4 flex items-center justify-center flex-col">
-        <h2 class="text-white font-semibold mb-5">THE HOUSE PICKED</h2>
-        <div class="layer  flex justify-center items-center h-[75%] w-[70%]  bg-red-600 rounded-full">
+      <div class="d h-[25%] sm:h-[70%] w-[80%] sm:w-1/4  gap-4  flex items-center justify-center flex-row sm:flex-col">
+        <h2 class="text-white text-sm sm:text-md font-semibold mb-5">THE HOUSE PICKED</h2>
+        <div class="layer shadow-black  flex justify-center items-center h-[95%] sm:h-[75%] w-[40%] sm:w-[70%]  bg-red-600 rounded-full">
           <div
-            class="img-box flex justify-center items-center h-[80%] w-[80%] shadow-inner shadow-black  bg-white rounded-full">
-            <img class=" -rotate-90 cpuimg w-24 " src="" alt="" />
+            class="img-box flex justify-center items-center h-[90%] sm:h-[80%] w-[90%] sm:w-[80%] shadow-inner shadow-black  bg-white rounded-full">
+            <img class=" -rotate-90   cpuimg w-40 sm:w-24  p-4 sm:p-0 " src="" alt="" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="footer h-20 flex items-center justify-end pr-8 gap-3">
+    <div class="footer -mt-10 sm:mt-0 h-20 flex items-center justify-end pr-8 gap-3">
       
       <button id="Rulesbtn" class="border p-2 rounded-sm text-sm text-white">RULES</button>
       <div
-        class="rules h-fit w-1/3 shadow-xl  right-[30%] hidden shadow-black p-4 bottom-1 rounded-lg  text-white absolute bg-blue-950">
+        class="rules h-96 sm:h-fit w-[95%] sm:w-1/3 shadow-xl right-2 sm:right-[30%] hidden shadow-black p-4 bottom-1 rounded-lg  text-white absolute bg-blue-950">
         <ul class="list-disc pl-4 ">
           <li class="list-none font-semibold">
             Here are the rules for playing Rock-Paper-Scissors
@@ -118,14 +118,14 @@
 
 
       </div>
-      <div class="resetmsg absolute left-[40%] bg-white p-2 hidden rounded-md border-l-8 border-green-500 ">
-        <h4 class="text-2xl">RESET SCORE SUCCESSFULLY</h4>
+      <div class="resetmsg absolute left-[20%] sm:left-[40%] bg-white p-2 hidden bottom-32 rounded-md border-l-8 border-green-500 ">
+        <h4 class=" text-md sm:text-2xl">RESET SCORE SUCCESSFULLY</h4>
       </div>
       <button id="Resetbtn" class="border p-2 rounded-sm text-sm text-white">
         RESET SCORE
       </button>
     </div>
-    <div class="description  hidden    absolute top-[40%] w-fit align-middle items-center justify-center flex-col flex left-[40%] text-6xl text-white font-semibold "> <p class="text-yellow-500">USER</p>&nbsp; win the game
+    <div class="description      absolute top-[38%] sm:top-[40%] w-fit align-middle items-center justify-center flex-col left-[20%] sm:left-[40%] hidden  text-4xl sm:text-6xl text-white font-semibold "> <p class="text-yellow-500">USER</p>&nbsp; win the game
     
       <br>
       <br>
